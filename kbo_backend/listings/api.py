@@ -14,6 +14,6 @@ class CategoryResource(ModelResource):
                                    full=True)
 
     class Meta:
-        queryset = Category.objects.all()
+        queryset = Category.objects.all().order_by("name")
         resource_name = "category"
         allowed_methods = [ "get" ]

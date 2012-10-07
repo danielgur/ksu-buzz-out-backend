@@ -1,3 +1,5 @@
+author__ = "danielgur2105@gmail.com (Daniel Gur)"
+
 import os
 import django
 

@@ -1,3 +1,5 @@
+author__ = "danielgur2105@gmail.com (Daniel Gur)"
+
 from django.db import models
 
 class Category(models.Model):

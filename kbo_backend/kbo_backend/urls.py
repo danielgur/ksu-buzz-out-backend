@@ -1,3 +1,5 @@
+author__ = "danielgur2105@gmail.com (Daniel Gur)"
+
 from django.conf.urls import patterns, include, url
 from listings.api import CategoryResource
 
