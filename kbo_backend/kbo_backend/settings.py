@@ -19,7 +19,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES =  {
-    'default':dj_database_url.config(default='postgres://localhost')
+    'default':dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     }
 """ 'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
