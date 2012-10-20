@@ -1,6 +1,7 @@
 author__ = "danielgur2105@gmail.com (Daniel Gur)"
 
 from django.db import models
+from decimal import Decimal
 
 class Category(models.Model):
     """The attributes for a category"""
@@ -20,8 +21,10 @@ class Location(models.Model):
     email = models.CharField(max_length=40, blank=True)
     website = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=300, blank=True)
-    latitude = models.DecimalField(max_digits=19, decimal_places=10, blank=True)
-    longitude = models.DecimalField(max_digits=19, decimal_places=10, blank=True)
+    latitude = models.DecimalField(max_digits=19, decimal_places=10, blank=True,
+                                   default=Decimal("0.00"))
+    longitude = models.DecimalField(max_digits=19, decimal_places=10,
+                                    blank=True,  default=Decimal("0.00"))
     image = models.ImageField("Picture", upload_to="uploaded_images/",
                               blank=True, null=True)
     active = models.BooleanField()
